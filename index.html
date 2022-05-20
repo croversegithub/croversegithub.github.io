@@ -48,7 +48,7 @@
     
     .roadmap-mobile .roadmap-status{
 margin-left:-15px;
-        margin-top:-4px;
+        margin-top:-16px;
         margin-left:-15px;min-height:75px;min-width:75px;background:#1199FA;border-radius:0;border:15px solid #080B12;
 }
 
@@ -103,7 +103,7 @@ height:45px;
 padding:12px 16px;
 background:#062037;
 /*margin-left:-24px;*/
-margin-top:-4px;
+margin-top:-16px;
 width:100%;white-space:nowrap;
 overflow:hidden;
 }
@@ -112,12 +112,9 @@ overflow:hidden;
  margin-top:-15px;
 }
 
-    .roadmap-desktop ul{
-     margin-bottom:0;margin-top:36px;   
-    }
     
 .roadmap-desktop .roadmap-status{
-margin-top:-4px;
+margin-top:-16px;
     height:75px;
     width:75px;
     background:#1199FA;border-radius:0;border:15px solid #080B12;
@@ -127,13 +124,17 @@ margin-top:-4px;
 z-index:100;
 }
 
+    .roadmap-desktop .phase-title-wrapper{
+    transform: scale(1.05,1.05);    
+    }
+    
     .roadmap-desktop ul li:first-child .roadmap-status{
  margin-top:-15px;
 }
 
 
 .roadmap-desktop .roadmap-text{
-z-index:0;height:45px;padding:12px 70px;background:#062037;margin-top:-4px;
+z-index:0;height:45px;padding:12px 70px;background:#062037;margin-top:-16px;
 }
 
     .roadmap-desktop ul li:first-child .roadmap-text{
@@ -352,28 +353,32 @@ padding-top:0 !important;
 }
 
 .tokenomics-container .tax-card{
- border:1px solid #1199FA;
-border-radius:0px;
+ border:0px solid #1199FA;
+border-radius:1em;
 max-width:480px;
-background:#062037;
+background:transparent;
+    overflow:hidden;
+   box-shadow: rgba(15, 129, 210, 0.6) 0px 1px 2px 0px, rgba(15, 129, 210, 0.3) 0px 2px 6px 2px;
 }
 
 .tokenomics-container .tax-title{
-color: transparent;
+color: #FFFFFF;
 font-weight: 600;
 line-height: 0.85;
--webkit-text-stroke-width: 1px;
+-webkit-text-stroke-width: 0px;
 -webkit-text-stroke-color: #1199FA;
 font-size:5em;
 font-weight:700;
+z-index:1;
 }
     
 .tokenomics-container .tax-title-2{
-color: #1199FA;
+color: #FFFFFF;
 font-size: 1.5em;
 font-weight: 700;
 letter-spacing: 0;
 line-height: 1;
+z-index:1;
 }
     
 .tokenomics-container .tax-description{
@@ -476,13 +481,13 @@ color:#FFFFFF;
 }
 
 .faq-container .accordion-item {
-    background-color: #D1D1D1;
+    background-color: #062037;
     border: 1px solid rgba(0,0,0,.125);
 }   
 
 .faq-container .accordion-button{
-    color: #0C0D0D !important;
-    background-color: #D1D1D1 !important;
+    color: #FFFFFF !important;
+    background-color: #062037 !important;
     box-shadow: inset 0 -1px 0 rgb(0 0 0 / 13%) important;
 }
 
@@ -491,16 +496,17 @@ color:#FFFFFF;
 }
 
 .faq-container .accordion-button:not(.collapsed)::after {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%230C0D0D'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23FFFFFF'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
 }
 
     
 .faq-container .accordion-button::after {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%230C0D0D'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23FFFFFF'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
 }
 
 .faq-container .accordion-body{
-color:#0C0D0D;
+color:#FFFFFF;
+text-align:left;
 }
 /* ---------------- */
 
@@ -777,19 +783,40 @@ z-index:3;
 <div class="row mt-5 mb-4">
 
 <div class="col-12 col-lg-4 mb-4">
-<div class="tax-card h-100 d-flex flex-column justify-content-center align-items-center px-4 py-5 mx-auto" data-aos="fade">
+<div class="tax-card h-100 d-flex flex-column justify-content-center align-items-center px-4 py-5 mx-auto" data-aos="fade" style="position:relative;">
+    <div style="position:absolute;top:0;left:0;height:100%;width:100%;z-index:0;">
+<video class="background-video" autoplay="" muted="" loop="">
+<source src="/images/video-3.webm" type="video/webm">
+</video>
+</div>
+
+<div id="darkbackgroundoverlay" class="dark-background-overlay" style="position:absolute;top:0;left:0;width:100%;height:100%;z-index:1;background: rgba(0,0,0,0.33);"></div>
 <span class="tax-title text-center mb-3">4%</span>
 <span class="tax-title-2 text-center">Liquidity Pool</span><span class="tax-description text-center"></span>
 </div>
 </div>
 <div class="col-12 col-lg-4 mb-4">
-<div class="tax-card h-100 d-flex flex-column justify-content-center align-items-center px-4 py-5 mx-auto" data-aos="fade">
+<div class="tax-card h-100 d-flex flex-column justify-content-center align-items-center px-4 py-5 mx-auto" data-aos="fade" style="position:relative;">
+    <div style="position:absolute;top:0;left:0;height:100%;width:100%;z-index:0;">
+<video class="background-video" autoplay="" muted="" loop="">
+<source src="/images/video-3.webm" type="video/webm">
+</video>
+</div>
+
+<div id="darkbackgroundoverlay" class="dark-background-overlay" style="position:absolute;top:0;left:0;width:100%;height:100%;z-index:1;background: rgba(0,0,0,0.33);"></div>
 <span class="tax-title text-center mb-3">4%</span>
 <span class="tax-title-2 text-center">Development</span><span class="tax-description text-center"></span>
 </div>
 </div>
 <div class="col-12 col-lg-4 mb-4">
-<div class="tax-card h-100 d-flex flex-column justify-content-center align-items-center px-4 py-5 mx-auto" data-aos="fade">
+<div class="tax-card h-100 d-flex flex-column justify-content-center align-items-center px-4 py-5 mx-auto" data-aos="fade" style="position:relative;">
+    <div style="position:absolute;top:0;left:0;height:100%;width:100%;z-index:0;">
+<video class="background-video" autoplay="" muted="" loop="">
+<source src="/images/video-3.webm" type="video/webm">
+</video>
+</div>
+
+<div id="darkbackgroundoverlay" class="dark-background-overlay" style="position:absolute;top:0;left:0;width:100%;height:100%;z-index:1;background: rgba(0,0,0,0.33);"></div>
 <span class="tax-title text-center mb-3">4%</span>
 <span class="tax-title-2 text-center">Marketing</span><span class="tax-description text-center"></span>
 </div>
@@ -850,12 +877,13 @@ z-index:3;
 <div class="col-12 col-lg-6 mt-4" data-aos="fade-left"><ul class="list-unstyled ">
 
 
-<li class="d-flex flex-row align-items-center m-0"><div class="d-flex flex-row align-items-center justify-content-center roadmap-status" style=""><svg viewBox="0 0 24 24" height="20" width="20" xmlns="http://www.w3.org/2000/svg"><path fill="#FFFFFF" d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.25 8.891l-1.421-1.409-6.105 6.218-3.078-2.937-1.396 1.436 4.5 4.319 7.5-7.627z"></path></svg></div><div class="roadmap-text" style="">Telegram and Twitter Launch</div></li>
-<li class="d-flex flex-row align-items-center m-0"><div class="roadmap-status d-flex flex-row align-items-center justify-content-center"><svg viewBox="0 0 24 24" height="20" width="20" xmlns="http://www.w3.org/2000/svg"><path fill="#FFFFFF" d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.25 8.891l-1.421-1.409-6.105 6.218-3.078-2.937-1.396 1.436 4.5 4.319 7.5-7.627z"></path></svg></div><div class="roadmap-text">Initial Marketing Campaign
-
+<li class="d-flex flex-row align-items-center m-0"><div class="d-flex flex-row align-items-center justify-content-center roadmap-status" style=""><svg viewBox="0 0 24 24" height="20" width="20" xmlns="http://www.w3.org/2000/svg"><path fill="#FFFFFF" d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.25 8.891l-1.421-1.409-6.105 6.218-3.078-2.937-1.396 1.436 4.5 4.319 7.5-7.627z"></path></svg></div><div class="roadmap-text" style="">Create socials</div></li>
+<li class="d-flex flex-row align-items-center m-0"><div class="roadmap-status d-flex flex-row align-items-center justify-content-center"><svg viewBox="0 0 24 24" height="20" width="20" xmlns="http://www.w3.org/2000/svg"><path fill="#FFFFFF" d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.25 8.891l-1.421-1.409-6.105 6.218-3.078-2.937-1.396 1.436 4.5 4.319 7.5-7.627z"></path></svg></div><div class="roadmap-text">Launch website
 </div></li>
-<li class="d-flex flex-row align-items-center m-0"><div class="roadmap-status d-flex flex-row align-items-center justify-content-center"><svg viewBox="0 0 24 24" height="20" width="20" xmlns="http://www.w3.org/2000/svg"><path fill="#FFFFFF" d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.25 8.891l-1.421-1.409-6.105 6.218-3.078-2.937-1.396 1.436 4.5 4.319 7.5-7.627z"></path></svg></div><div class="roadmap-text">MM Fair Launch</div></li>
-<li class="d-flex flex-row align-items-center m-0"><div style="" class="roadmap-status d-flex flex-row align-items-center justify-content-center"><svg viewBox="0 0 24 24" height="20" width="20" xmlns="http://www.w3.org/2000/svg"><path fill="#FFFFFF" d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.25 8.891l-1.421-1.409-6.105 6.218-3.078-2.937-1.396 1.436 4.5 4.319 7.5-7.627z"></path></svg></div><div class="roadmap-text">LP Lock Extension</div></li>
+<li class="d-flex flex-row align-items-center m-0"><div class="roadmap-status d-flex flex-row align-items-center justify-content-center"><svg viewBox="0 0 24 24" height="20" width="20" xmlns="http://www.w3.org/2000/svg"><path fill="#FFFFFF" d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.25 8.891l-1.421-1.409-6.105 6.218-3.078-2.937-1.396 1.436 4.5 4.319 7.5-7.627z"></path></svg></div><div class="roadmap-text">Contract creation </div></li>
+<li class="d-flex flex-row align-items-center m-0"><div style="" class="roadmap-status d-flex flex-row align-items-center justify-content-center"><svg viewBox="0 0 24 24" height="20" width="20" xmlns="http://www.w3.org/2000/svg"><path fill="#FFFFFF" d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.25 8.891l-1.421-1.409-6.105 6.218-3.078-2.937-1.396 1.436 4.5 4.319 7.5-7.627z"></path></svg></div><div class="roadmap-text">Build community </div></li>
+
+<li class="d-flex flex-row align-items-center m-0"><div style="" class="roadmap-status d-flex flex-row align-items-center justify-content-center"><svg viewBox="0 0 24 24" height="20" width="20" xmlns="http://www.w3.org/2000/svg"><path fill="#FFFFFF" d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.25 8.891l-1.421-1.409-6.105 6.218-3.078-2.937-1.396 1.436 4.5 4.319 7.5-7.627z"></path></svg></div><div class="roadmap-text">List on voting platform </div></li><li class="d-flex flex-row align-items-center m-0"><div style="" class="roadmap-status d-flex flex-row align-items-center justify-content-center"><svg viewBox="0 0 24 24" height="20" width="20" xmlns="http://www.w3.org/2000/svg"><path fill="#FFFFFF" d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.25 8.891l-1.421-1.409-6.105 6.218-3.078-2.937-1.396 1.436 4.5 4.319 7.5-7.627z"></path></svg></div><div class="roadmap-text">500 holders</div></li>
 
 
 
@@ -864,14 +892,16 @@ z-index:3;
 
 <div class="roadmap-desktop d-none d-lg-flex row mt-5 "><div class="col-12 col-lg-6" data-aos="fade-right"><div class="phase-title-wrapper mx-auto mx-lg-0 ms-lg-auto d-flex flex-column justify-content-center align-items-center "><h3 style="font-weight:700;font-size:2em;">PHASE 1</h3></div></div>
 <div class="col-12 col-lg-6" data-aos="fade-left"><ul class="list-unstyled ">
-<li class="d-flex flex-row align-items-center m-0"><div style="" class="roadmap-status d-flex flex-row align-items-center justify-content-center"><svg viewBox="0 0 24 24" height="20" width="20" xmlns="http://www.w3.org/2000/svg"><path fill="#FFFFFF" d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.25 8.891l-1.421-1.409-6.105 6.218-3.078-2.937-1.396 1.436 4.5 4.319 7.5-7.627z"></path></svg></div><div style="" class="roadmap-text">Telegram and Twitter Launch</div></li>
-<li class="d-flex flex-row align-items-center m-0"><div style="" class="roadmap-status d-flex flex-row align-items-center justify-content-center"><svg viewBox="0 0 24 24" height="20" width="20" xmlns="http://www.w3.org/2000/svg"><path fill="#FFFFFF" d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.25 8.891l-1.421-1.409-6.105 6.218-3.078-2.937-1.396 1.436 4.5 4.319 7.5-7.627z"></path></svg></div><div style="" class="roadmap-text">Initial Marketing Campaign
-
+<li class="d-flex flex-row align-items-center m-0"><div style="" class="roadmap-status d-flex flex-row align-items-center justify-content-center"><svg viewBox="0 0 24 24" height="20" width="20" xmlns="http://www.w3.org/2000/svg"><path fill="#FFFFFF" d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.25 8.891l-1.421-1.409-6.105 6.218-3.078-2.937-1.396 1.436 4.5 4.319 7.5-7.627z"></path></svg></div><div style="" class="roadmap-text">Create socials</div></li>
+<li class="d-flex flex-row align-items-center m-0"><div style="" class="roadmap-status d-flex flex-row align-items-center justify-content-center"><svg viewBox="0 0 24 24" height="20" width="20" xmlns="http://www.w3.org/2000/svg"><path fill="#FFFFFF" d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.25 8.891l-1.421-1.409-6.105 6.218-3.078-2.937-1.396 1.436 4.5 4.319 7.5-7.627z"></path></svg></div><div style="" class="roadmap-text">Launch website
 </div></li>
-<li class="d-flex flex-row align-items-center m-0"><div style="" class="roadmap-status d-flex flex-row align-items-center justify-content-center"><svg viewBox="0 0 24 24" height="20" width="20" xmlns="http://www.w3.org/2000/svg"><path fill="#FFFFFF" d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.25 8.891l-1.421-1.409-6.105 6.218-3.078-2.937-1.396 1.436 4.5 4.319 7.5-7.627z"></path></svg></div><div style="" class="roadmap-text">MM Fair Launch
+<li class="d-flex flex-row align-items-center m-0"><div style="" class="roadmap-status d-flex flex-row align-items-center justify-content-center"><svg viewBox="0 0 24 24" height="20" width="20" xmlns="http://www.w3.org/2000/svg"><path fill="#FFFFFF" d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.25 8.891l-1.421-1.409-6.105 6.218-3.078-2.937-1.396 1.436 4.5 4.319 7.5-7.627z"></path></svg></div><div style="" class="roadmap-text">Contract creation 
 </div></li>
-<li class="d-flex flex-row align-items-center m-0"><div style="" class="roadmap-status d-flex flex-row align-items-center justify-content-center"><svg viewBox="0 0 24 24" height="20" width="20" xmlns="http://www.w3.org/2000/svg"><path fill="#FFFFFF" d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.25 8.891l-1.421-1.409-6.105 6.218-3.078-2.937-1.396 1.436 4.5 4.319 7.5-7.627z"></path></svg></div><div style="" class="roadmap-text">LP Lock Extension
 
+<li class="d-flex flex-row align-items-center m-0"><div style="" class="roadmap-status d-flex flex-row align-items-center justify-content-center"><svg viewBox="0 0 24 24" height="20" width="20" xmlns="http://www.w3.org/2000/svg"><path fill="#FFFFFF" d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.25 8.891l-1.421-1.409-6.105 6.218-3.078-2.937-1.396 1.436 4.5 4.319 7.5-7.627z"></path></svg></div><div style="" class="roadmap-text">Build community 
+</div></li>
+<li class="d-flex flex-row align-items-center m-0"><div style="" class="roadmap-status d-flex flex-row align-items-center justify-content-center"><svg viewBox="0 0 24 24" height="20" width="20" xmlns="http://www.w3.org/2000/svg"><path fill="#FFFFFF" d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.25 8.891l-1.421-1.409-6.105 6.218-3.078-2.937-1.396 1.436 4.5 4.319 7.5-7.627z"></path></svg></div><div style="" class="roadmap-text">List on voting platform 
+</div></li><li class="d-flex flex-row align-items-center m-0"><div style="" class="roadmap-status d-flex flex-row align-items-center justify-content-center"><svg viewBox="0 0 24 24" height="20" width="20" xmlns="http://www.w3.org/2000/svg"><path fill="#FFFFFF" d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.25 8.891l-1.421-1.409-6.105 6.218-3.078-2.937-1.396 1.436 4.5 4.319 7.5-7.627z"></path></svg></div><div style="" class="roadmap-text">500 holders
 </div></li>
 
 </ul></div>
@@ -879,10 +909,12 @@ z-index:3;
 <div class="col-12 col-lg-6 mt-4" data-aos="fade-left"><ul class="list-unstyled ">
 
 
-<li class="d-flex flex-row align-items-center m-0"><div style="" class="roadmap-status d-flex flex-row align-items-center justify-content-center"><svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 24 24" fill="#FFFFFF"><path d="M18.513 7.119c.958-1.143 1.487-2.577 1.487-4.036v-3.083h-16v3.083c0 1.459.528 2.892 1.487 4.035l3.086 3.68c.567.677.571 1.625.009 2.306l-3.13 3.794c-.936 1.136-1.452 2.555-1.452 3.995v3.107h16v-3.107c0-1.44-.517-2.858-1.453-3.994l-3.13-3.794c-.562-.681-.558-1.629.009-2.306l3.087-3.68zm-4.639 7.257l3.13 3.794c.652.792.996 1.726.996 2.83h-12c0-1.104.343-2.039.996-2.829l3.129-3.793c1.167-1.414 1.159-3.459-.019-4.864l-3.086-3.681c-.66-.785-1.02-1.736-1.02-2.834h12c0 1.101-.363 2.05-1.02 2.834l-3.087 3.68c-1.177 1.405-1.185 3.451-.019 4.863z"></path></svg></div><div style="" class="roadmap-text">Website V1 Launch</div></li>
-<li class="d-flex flex-row align-items-center m-0"><div style="" class="roadmap-status d-flex flex-row align-items-center justify-content-center"><svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 24 24" fill="#FFFFFF"><path d="M18.513 7.119c.958-1.143 1.487-2.577 1.487-4.036v-3.083h-16v3.083c0 1.459.528 2.892 1.487 4.035l3.086 3.68c.567.677.571 1.625.009 2.306l-3.13 3.794c-.936 1.136-1.452 2.555-1.452 3.995v3.107h16v-3.107c0-1.44-.517-2.858-1.453-3.994l-3.13-3.794c-.562-.681-.558-1.629.009-2.306l3.087-3.68zm-4.639 7.257l3.13 3.794c.652.792.996 1.726.996 2.83h-12c0-1.104.343-2.039.996-2.829l3.129-3.793c1.167-1.414 1.159-3.459-.019-4.864l-3.086-3.681c-.66-.785-1.02-1.736-1.02-2.834h12c0 1.101-.363 2.05-1.02 2.834l-3.087 3.68c-1.177 1.405-1.185 3.451-.019 4.863z"></path></svg></div><div style="" class="roadmap-text">Community Shilling</div></li>
-<li class="d-flex flex-row align-items-center m-0"><div style="" class="roadmap-status d-flex flex-row align-items-center justify-content-center"><svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 24 24" fill="#FFFFFF"><path d="M18.513 7.119c.958-1.143 1.487-2.577 1.487-4.036v-3.083h-16v3.083c0 1.459.528 2.892 1.487 4.035l3.086 3.68c.567.677.571 1.625.009 2.306l-3.13 3.794c-.936 1.136-1.452 2.555-1.452 3.995v3.107h16v-3.107c0-1.44-.517-2.858-1.453-3.994l-3.13-3.794c-.562-.681-.558-1.629.009-2.306l3.087-3.68zm-4.639 7.257l3.13 3.794c.652.792.996 1.726.996 2.83h-12c0-1.104.343-2.039.996-2.829l3.129-3.793c1.167-1.414 1.159-3.459-.019-4.864l-3.086-3.681c-.66-.785-1.02-1.736-1.02-2.834h12c0 1.101-.363 2.05-1.02 2.834l-3.087 3.68c-1.177 1.405-1.185 3.451-.019 4.863z"></path></svg></div><div style="" class="roadmap-text">Coin Listing Sites</div></li>
-<li class="d-flex flex-row align-items-center m-0"><div style="" class="roadmap-status d-flex flex-row align-items-center justify-content-center"><svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 24 24" fill="#FFFFFF"><path d="M18.513 7.119c.958-1.143 1.487-2.577 1.487-4.036v-3.083h-16v3.083c0 1.459.528 2.892 1.487 4.035l3.086 3.68c.567.677.571 1.625.009 2.306l-3.13 3.794c-.936 1.136-1.452 2.555-1.452 3.995v3.107h16v-3.107c0-1.44-.517-2.858-1.453-3.994l-3.13-3.794c-.562-.681-.558-1.629.009-2.306l3.087-3.68zm-4.639 7.257l3.13 3.794c.652.792.996 1.726.996 2.83h-12c0-1.104.343-2.039.996-2.829l3.129-3.793c1.167-1.414 1.159-3.459-.019-4.864l-3.086-3.681c-.66-.785-1.02-1.736-1.02-2.834h12c0 1.101-.363 2.05-1.02 2.834l-3.087 3.68c-1.177 1.405-1.185 3.451-.019 4.863z"></path></svg></div><div style="" class="roadmap-text">Telegram and Twitter Calls</div></li>
+<li class="d-flex flex-row align-items-center m-0"><div style="" class="roadmap-status d-flex flex-row align-items-center justify-content-center"><svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 24 24" fill="#FFFFFF"><path d="M18.513 7.119c.958-1.143 1.487-2.577 1.487-4.036v-3.083h-16v3.083c0 1.459.528 2.892 1.487 4.035l3.086 3.68c.567.677.571 1.625.009 2.306l-3.13 3.794c-.936 1.136-1.452 2.555-1.452 3.995v3.107h16v-3.107c0-1.44-.517-2.858-1.453-3.994l-3.13-3.794c-.562-.681-.558-1.629.009-2.306l3.087-3.68zm-4.639 7.257l3.13 3.794c.652.792.996 1.726.996 2.83h-12c0-1.104.343-2.039.996-2.829l3.129-3.793c1.167-1.414 1.159-3.459-.019-4.864l-3.086-3.681c-.66-.785-1.02-1.736-1.02-2.834h12c0 1.101-.363 2.05-1.02 2.834l-3.087 3.68c-1.177 1.405-1.185 3.451-.019 4.863z"></path></svg></div><div style="" class="roadmap-text">Start marketing </div></li>
+<li class="d-flex flex-row align-items-center m-0"><div style="" class="roadmap-status d-flex flex-row align-items-center justify-content-center"><svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 24 24" fill="#FFFFFF"><path d="M18.513 7.119c.958-1.143 1.487-2.577 1.487-4.036v-3.083h-16v3.083c0 1.459.528 2.892 1.487 4.035l3.086 3.68c.567.677.571 1.625.009 2.306l-3.13 3.794c-.936 1.136-1.452 2.555-1.452 3.995v3.107h16v-3.107c0-1.44-.517-2.858-1.453-3.994l-3.13-3.794c-.562-.681-.558-1.629.009-2.306l3.087-3.68zm-4.639 7.257l3.13 3.794c.652.792.996 1.726.996 2.83h-12c0-1.104.343-2.039.996-2.829l3.129-3.793c1.167-1.414 1.159-3.459-.019-4.864l-3.086-3.681c-.66-.785-1.02-1.736-1.02-2.834h12c0 1.101-.363 2.05-1.02 2.834l-3.087 3.68c-1.177 1.405-1.185 3.451-.019 4.863z"></path></svg></div><div style="" class="roadmap-text">Listing on CMC</div></li>
+<li class="d-flex flex-row align-items-center m-0"><div style="" class="roadmap-status d-flex flex-row align-items-center justify-content-center"><svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 24 24" fill="#FFFFFF"><path d="M18.513 7.119c.958-1.143 1.487-2.577 1.487-4.036v-3.083h-16v3.083c0 1.459.528 2.892 1.487 4.035l3.086 3.68c.567.677.571 1.625.009 2.306l-3.13 3.794c-.936 1.136-1.452 2.555-1.452 3.995v3.107h16v-3.107c0-1.44-.517-2.858-1.453-3.994l-3.13-3.794c-.562-.681-.558-1.629.009-2.306l3.087-3.68zm-4.639 7.257l3.13 3.794c.652.792.996 1.726.996 2.83h-12c0-1.104.343-2.039.996-2.829l3.129-3.793c1.167-1.414 1.159-3.459-.019-4.864l-3.086-3.681c-.66-.785-1.02-1.736-1.02-2.834h12c0 1.101-.363 2.05-1.02 2.834l-3.087 3.68c-1.177 1.405-1.185 3.451-.019 4.863z"></path></svg></div><div style="" class="roadmap-text">Launch NFTs</div></li>
+<li class="d-flex flex-row align-items-center m-0"><div style="" class="roadmap-status d-flex flex-row align-items-center justify-content-center"><svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 24 24" fill="#FFFFFF"><path d="M18.513 7.119c.958-1.143 1.487-2.577 1.487-4.036v-3.083h-16v3.083c0 1.459.528 2.892 1.487 4.035l3.086 3.68c.567.677.571 1.625.009 2.306l-3.13 3.794c-.936 1.136-1.452 2.555-1.452 3.995v3.107h16v-3.107c0-1.44-.517-2.858-1.453-3.994l-3.13-3.794c-.562-.681-.558-1.629.009-2.306l3.087-3.68zm-4.639 7.257l3.13 3.794c.652.792.996 1.726.996 2.83h-12c0-1.104.343-2.039.996-2.829l3.129-3.793c1.167-1.414 1.159-3.459-.019-4.864l-3.086-3.681c-.66-.785-1.02-1.736-1.02-2.834h12c0 1.101-.363 2.05-1.02 2.834l-3.087 3.68c-1.177 1.405-1.185 3.451-.019 4.863z"></path></svg></div><div style="" class="roadmap-text">Launch staking platform </div></li>
+
+<li class="d-flex flex-row align-items-center m-0"><div style="" class="roadmap-status d-flex flex-row align-items-center justify-content-center"><svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 24 24" fill="#FFFFFF"><path d="M18.513 7.119c.958-1.143 1.487-2.577 1.487-4.036v-3.083h-16v3.083c0 1.459.528 2.892 1.487 4.035l3.086 3.68c.567.677.571 1.625.009 2.306l-3.13 3.794c-.936 1.136-1.452 2.555-1.452 3.995v3.107h16v-3.107c0-1.44-.517-2.858-1.453-3.994l-3.13-3.794c-.562-.681-.558-1.629.009-2.306l3.087-3.68zm-4.639 7.257l3.13 3.794c.652.792.996 1.726.996 2.83h-12c0-1.104.343-2.039.996-2.829l3.129-3.793c1.167-1.414 1.159-3.459-.019-4.864l-3.086-3.681c-.66-.785-1.02-1.736-1.02-2.834h12c0 1.101-.363 2.05-1.02 2.834l-3.087 3.68c-1.177 1.405-1.185 3.451-.019 4.863z"></path></svg></div><div style="" class="roadmap-text">Partnerships</div></li><li class="d-flex flex-row align-items-center m-0"><div style="" class="roadmap-status d-flex flex-row align-items-center justify-content-center"><svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 24 24" fill="#FFFFFF"><path d="M18.513 7.119c.958-1.143 1.487-2.577 1.487-4.036v-3.083h-16v3.083c0 1.459.528 2.892 1.487 4.035l3.086 3.68c.567.677.571 1.625.009 2.306l-3.13 3.794c-.936 1.136-1.452 2.555-1.452 3.995v3.107h16v-3.107c0-1.44-.517-2.858-1.453-3.994l-3.13-3.794c-.562-.681-.558-1.629.009-2.306l3.087-3.68zm-4.639 7.257l3.13 3.794c.652.792.996 1.726.996 2.83h-12c0-1.104.343-2.039.996-2.829l3.129-3.793c1.167-1.414 1.159-3.459-.019-4.864l-3.086-3.681c-.66-.785-1.02-1.736-1.02-2.834h12c0 1.101-.363 2.05-1.02 2.834l-3.087 3.68c-1.177 1.405-1.185 3.451-.019 4.863z"></path></svg></div><div style="" class="roadmap-text">2000 holders</div></li>
 
 
 
@@ -892,15 +924,15 @@ z-index:3;
 
 
 <div class="roadmap-desktop d-none d-lg-flex row mt-5"><div class="col-12 col-lg-6 order-sm-1 order-lg-2" data-aos="fade-left"><div class="phase-title-wrapper mx-auto mx-lg-0 me-lg-auto d-flex flex-column justify-content-center align-items-center "><h3 style="font-weight:700;font-size:2em;">PHASE 2</h3></div></div>
-<div class="col-12 col-lg-6 order-sm-2 order-lg-1" data-aos="fade-right"><ul class="list-unstyled "><li class="d-flex flex-row-reverse align-items-center m-0"><div style="" class="roadmap-status d-flex flex-row align-items-center justify-content-center"><svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 24 24" fill="#FFFFFF"><path d="M18.513 7.119c.958-1.143 1.487-2.577 1.487-4.036v-3.083h-16v3.083c0 1.459.528 2.892 1.487 4.035l3.086 3.68c.567.677.571 1.625.009 2.306l-3.13 3.794c-.936 1.136-1.452 2.555-1.452 3.995v3.107h16v-3.107c0-1.44-.517-2.858-1.453-3.994l-3.13-3.794c-.562-.681-.558-1.629.009-2.306l3.087-3.68zm-4.639 7.257l3.13 3.794c.652.792.996 1.726.996 2.83h-12c0-1.104.343-2.039.996-2.829l3.129-3.793c1.167-1.414 1.159-3.459-.019-4.864l-3.086-3.681c-.66-.785-1.02-1.736-1.02-2.834h12c0 1.101-.363 2.05-1.02 2.834l-3.087 3.68c-1.177 1.405-1.185 3.451-.019 4.863z"></path></svg></div><div style="" class="roadmap-text">Website V1 Launch
-
+<div class="col-12 col-lg-6 order-sm-2 order-lg-1" data-aos="fade-right"><ul class="list-unstyled "><li class="d-flex flex-row-reverse align-items-center m-0"><div style="" class="roadmap-status d-flex flex-row align-items-center justify-content-center"><svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 24 24" fill="#FFFFFF"><path d="M18.513 7.119c.958-1.143 1.487-2.577 1.487-4.036v-3.083h-16v3.083c0 1.459.528 2.892 1.487 4.035l3.086 3.68c.567.677.571 1.625.009 2.306l-3.13 3.794c-.936 1.136-1.452 2.555-1.452 3.995v3.107h16v-3.107c0-1.44-.517-2.858-1.453-3.994l-3.13-3.794c-.562-.681-.558-1.629.009-2.306l3.087-3.68zm-4.639 7.257l3.13 3.794c.652.792.996 1.726.996 2.83h-12c0-1.104.343-2.039.996-2.829l3.129-3.793c1.167-1.414 1.159-3.459-.019-4.864l-3.086-3.681c-.66-.785-1.02-1.736-1.02-2.834h12c0 1.101-.363 2.05-1.02 2.834l-3.087 3.68c-1.177 1.405-1.185 3.451-.019 4.863z"></path></svg></div><div style="" class="roadmap-text">Start marketing 
 </div></li>
 
-<li class="d-flex flex-row-reverse align-items-center m-0"><div style="" class="roadmap-status d-flex flex-row align-items-center justify-content-center"><svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 24 24" fill="#FFFFFF"><path d="M18.513 7.119c.958-1.143 1.487-2.577 1.487-4.036v-3.083h-16v3.083c0 1.459.528 2.892 1.487 4.035l3.086 3.68c.567.677.571 1.625.009 2.306l-3.13 3.794c-.936 1.136-1.452 2.555-1.452 3.995v3.107h16v-3.107c0-1.44-.517-2.858-1.453-3.994l-3.13-3.794c-.562-.681-.558-1.629.009-2.306l3.087-3.68zm-4.639 7.257l3.13 3.794c.652.792.996 1.726.996 2.83h-12c0-1.104.343-2.039.996-2.829l3.129-3.793c1.167-1.414 1.159-3.459-.019-4.864l-3.086-3.681c-.66-.785-1.02-1.736-1.02-2.834h12c0 1.101-.363 2.05-1.02 2.834l-3.087 3.68c-1.177 1.405-1.185 3.451-.019 4.863z"></path></svg></div><div style="" class="roadmap-text">Community Shilling
-
+<li class="d-flex flex-row-reverse align-items-center m-0"><div style="" class="roadmap-status d-flex flex-row align-items-center justify-content-center"><svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 24 24" fill="#FFFFFF"><path d="M18.513 7.119c.958-1.143 1.487-2.577 1.487-4.036v-3.083h-16v3.083c0 1.459.528 2.892 1.487 4.035l3.086 3.68c.567.677.571 1.625.009 2.306l-3.13 3.794c-.936 1.136-1.452 2.555-1.452 3.995v3.107h16v-3.107c0-1.44-.517-2.858-1.453-3.994l-3.13-3.794c-.562-.681-.558-1.629.009-2.306l3.087-3.68zm-4.639 7.257l3.13 3.794c.652.792.996 1.726.996 2.83h-12c0-1.104.343-2.039.996-2.829l3.129-3.793c1.167-1.414 1.159-3.459-.019-4.864l-3.086-3.681c-.66-.785-1.02-1.736-1.02-2.834h12c0 1.101-.363 2.05-1.02 2.834l-3.087 3.68c-1.177 1.405-1.185 3.451-.019 4.863z"></path></svg></div><div style="" class="roadmap-text">Listing on CMC
 </div></li>
 
-<li class="d-flex flex-row-reverse align-items-center m-0"><div style="" class="roadmap-status d-flex flex-row align-items-center justify-content-center"><svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 24 24" fill="#FFFFFF"><path d="M18.513 7.119c.958-1.143 1.487-2.577 1.487-4.036v-3.083h-16v3.083c0 1.459.528 2.892 1.487 4.035l3.086 3.68c.567.677.571 1.625.009 2.306l-3.13 3.794c-.936 1.136-1.452 2.555-1.452 3.995v3.107h16v-3.107c0-1.44-.517-2.858-1.453-3.994l-3.13-3.794c-.562-.681-.558-1.629.009-2.306l3.087-3.68zm-4.639 7.257l3.13 3.794c.652.792.996 1.726.996 2.83h-12c0-1.104.343-2.039.996-2.829l3.129-3.793c1.167-1.414 1.159-3.459-.019-4.864l-3.086-3.681c-.66-.785-1.02-1.736-1.02-2.834h12c0 1.101-.363 2.05-1.02 2.834l-3.087 3.68c-1.177 1.405-1.185 3.451-.019 4.863z"></path></svg></div><div style="" class="roadmap-text">Coin Listing Sites</div></li><li class="d-flex flex-row-reverse align-items-center m-0"><div style="" class="roadmap-status d-flex flex-row align-items-center justify-content-center"><svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 24 24" fill="#FFFFFF"><path d="M18.513 7.119c.958-1.143 1.487-2.577 1.487-4.036v-3.083h-16v3.083c0 1.459.528 2.892 1.487 4.035l3.086 3.68c.567.677.571 1.625.009 2.306l-3.13 3.794c-.936 1.136-1.452 2.555-1.452 3.995v3.107h16v-3.107c0-1.44-.517-2.858-1.453-3.994l-3.13-3.794c-.562-.681-.558-1.629.009-2.306l3.087-3.68zm-4.639 7.257l3.13 3.794c.652.792.996 1.726.996 2.83h-12c0-1.104.343-2.039.996-2.829l3.129-3.793c1.167-1.414 1.159-3.459-.019-4.864l-3.086-3.681c-.66-.785-1.02-1.736-1.02-2.834h12c0 1.101-.363 2.05-1.02 2.834l-3.087 3.68c-1.177 1.405-1.185 3.451-.019 4.863z"></path></svg></div><div style="" class="roadmap-text">Telegram and Twitter Calls</div></li>
+<li class="d-flex flex-row-reverse align-items-center m-0"><div style="" class="roadmap-status d-flex flex-row align-items-center justify-content-center"><svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 24 24" fill="#FFFFFF"><path d="M18.513 7.119c.958-1.143 1.487-2.577 1.487-4.036v-3.083h-16v3.083c0 1.459.528 2.892 1.487 4.035l3.086 3.68c.567.677.571 1.625.009 2.306l-3.13 3.794c-.936 1.136-1.452 2.555-1.452 3.995v3.107h16v-3.107c0-1.44-.517-2.858-1.453-3.994l-3.13-3.794c-.562-.681-.558-1.629.009-2.306l3.087-3.68zm-4.639 7.257l3.13 3.794c.652.792.996 1.726.996 2.83h-12c0-1.104.343-2.039.996-2.829l3.129-3.793c1.167-1.414 1.159-3.459-.019-4.864l-3.086-3.681c-.66-.785-1.02-1.736-1.02-2.834h12c0 1.101-.363 2.05-1.02 2.834l-3.087 3.68c-1.177 1.405-1.185 3.451-.019 4.863z"></path></svg></div><div style="" class="roadmap-text">Launch NFTs</div></li>
+<li class="d-flex flex-row-reverse align-items-center m-0"><div style="" class="roadmap-status d-flex flex-row align-items-center justify-content-center"><svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 24 24" fill="#FFFFFF"><path d="M18.513 7.119c.958-1.143 1.487-2.577 1.487-4.036v-3.083h-16v3.083c0 1.459.528 2.892 1.487 4.035l3.086 3.68c.567.677.571 1.625.009 2.306l-3.13 3.794c-.936 1.136-1.452 2.555-1.452 3.995v3.107h16v-3.107c0-1.44-.517-2.858-1.453-3.994l-3.13-3.794c-.562-.681-.558-1.629.009-2.306l3.087-3.68zm-4.639 7.257l3.13 3.794c.652.792.996 1.726.996 2.83h-12c0-1.104.343-2.039.996-2.829l3.129-3.793c1.167-1.414 1.159-3.459-.019-4.864l-3.086-3.681c-.66-.785-1.02-1.736-1.02-2.834h12c0 1.101-.363 2.05-1.02 2.834l-3.087 3.68c-1.177 1.405-1.185 3.451-.019 4.863z"></path></svg></div><div style="" class="roadmap-text">Launch staking platform </div></li>
+<li class="d-flex flex-row-reverse align-items-center m-0"><div style="" class="roadmap-status d-flex flex-row align-items-center justify-content-center"><svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 24 24" fill="#FFFFFF"><path d="M18.513 7.119c.958-1.143 1.487-2.577 1.487-4.036v-3.083h-16v3.083c0 1.459.528 2.892 1.487 4.035l3.086 3.68c.567.677.571 1.625.009 2.306l-3.13 3.794c-.936 1.136-1.452 2.555-1.452 3.995v3.107h16v-3.107c0-1.44-.517-2.858-1.453-3.994l-3.13-3.794c-.562-.681-.558-1.629.009-2.306l3.087-3.68zm-4.639 7.257l3.13 3.794c.652.792.996 1.726.996 2.83h-12c0-1.104.343-2.039.996-2.829l3.129-3.793c1.167-1.414 1.159-3.459-.019-4.864l-3.086-3.681c-.66-.785-1.02-1.736-1.02-2.834h12c0 1.101-.363 2.05-1.02 2.834l-3.087 3.68c-1.177 1.405-1.185 3.451-.019 4.863z"></path></svg></div><div style="" class="roadmap-text">Partnerships</div></li><li class="d-flex flex-row-reverse align-items-center m-0"><div style="" class="roadmap-status d-flex flex-row align-items-center justify-content-center"><svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 24 24" fill="#FFFFFF"><path d="M18.513 7.119c.958-1.143 1.487-2.577 1.487-4.036v-3.083h-16v3.083c0 1.459.528 2.892 1.487 4.035l3.086 3.68c.567.677.571 1.625.009 2.306l-3.13 3.794c-.936 1.136-1.452 2.555-1.452 3.995v3.107h16v-3.107c0-1.44-.517-2.858-1.453-3.994l-3.13-3.794c-.562-.681-.558-1.629.009-2.306l3.087-3.68zm-4.639 7.257l3.13 3.794c.652.792.996 1.726.996 2.83h-12c0-1.104.343-2.039.996-2.829l3.129-3.793c1.167-1.414 1.159-3.459-.019-4.864l-3.086-3.681c-.66-.785-1.02-1.736-1.02-2.834h12c0 1.101-.363 2.05-1.02 2.834l-3.087 3.68c-1.177 1.405-1.185 3.451-.019 4.863z"></path></svg></div><div style="" class="roadmap-text">2000 holders</div></li>
 
 
 </ul></div>
@@ -908,24 +940,27 @@ z-index:3;
 <div class="col-12 col-lg-6 mt-4" data-aos="fade-left"><ul class="list-unstyled ">
 
 
-<li class="d-flex flex-row align-items-center m-0"><div style="" class="roadmap-status d-flex flex-row align-items-center justify-content-center"><svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 24 24" fill="#FFFFFF"><path d="M18.513 7.119c.958-1.143 1.487-2.577 1.487-4.036v-3.083h-16v3.083c0 1.459.528 2.892 1.487 4.035l3.086 3.68c.567.677.571 1.625.009 2.306l-3.13 3.794c-.936 1.136-1.452 2.555-1.452 3.995v3.107h16v-3.107c0-1.44-.517-2.858-1.453-3.994l-3.13-3.794c-.562-.681-.558-1.629.009-2.306l3.087-3.68zm-4.639 7.257l3.13 3.794c.652.792.996 1.726.996 2.83h-12c0-1.104.343-2.039.996-2.829l3.129-3.793c1.167-1.414 1.159-3.459-.019-4.864l-3.086-3.681c-.66-.785-1.02-1.736-1.02-2.834h12c0 1.101-.363 2.05-1.02 2.834l-3.087 3.68c-1.177 1.405-1.185 3.451-.019 4.863z"></path></svg></div><div style="" class="roadmap-text">Utility Community Decision</div></li>
-<li class="d-flex flex-row align-items-center m-0"><div style="" class="roadmap-status d-flex flex-row align-items-center justify-content-center"><svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 24 24" fill="#FFFFFF"><path d="M18.513 7.119c.958-1.143 1.487-2.577 1.487-4.036v-3.083h-16v3.083c0 1.459.528 2.892 1.487 4.035l3.086 3.68c.567.677.571 1.625.009 2.306l-3.13 3.794c-.936 1.136-1.452 2.555-1.452 3.995v3.107h16v-3.107c0-1.44-.517-2.858-1.453-3.994l-3.13-3.794c-.562-.681-.558-1.629.009-2.306l3.087-3.68zm-4.639 7.257l3.13 3.794c.652.792.996 1.726.996 2.83h-12c0-1.104.343-2.039.996-2.829l3.129-3.793c1.167-1.414 1.159-3.459-.019-4.864l-3.086-3.681c-.66-.785-1.02-1.736-1.02-2.834h12c0 1.101-.363 2.05-1.02 2.834l-3.087 3.68c-1.177 1.405-1.185 3.451-.019 4.863z"></path></svg></div><div style="" class="roadmap-text">Ecron Utility Expansion</div></li>
-<li class="d-flex flex-row align-items-center m-0"><div style="" class="roadmap-status d-flex flex-row align-items-center justify-content-center"><svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 24 24" fill="#FFFFFF"><path d="M18.513 7.119c.958-1.143 1.487-2.577 1.487-4.036v-3.083h-16v3.083c0 1.459.528 2.892 1.487 4.035l3.086 3.68c.567.677.571 1.625.009 2.306l-3.13 3.794c-.936 1.136-1.452 2.555-1.452 3.995v3.107h16v-3.107c0-1.44-.517-2.858-1.453-3.994l-3.13-3.794c-.562-.681-.558-1.629.009-2.306l3.087-3.68zm-4.639 7.257l3.13 3.794c.652.792.996 1.726.996 2.83h-12c0-1.104.343-2.039.996-2.829l3.129-3.793c1.167-1.414 1.159-3.459-.019-4.864l-3.086-3.681c-.66-.785-1.02-1.736-1.02-2.834h12c0 1.101-.363 2.05-1.02 2.834l-3.087 3.68c-1.177 1.405-1.185 3.451-.019 4.863z"></path></svg></div><div style="" class="roadmap-text">Massive Marketing Campaign</div></li>
-<li class="d-flex flex-row align-items-center m-0"><div style="" class="roadmap-status d-flex flex-row align-items-center justify-content-center"><svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 24 24" fill="#FFFFFF"><path d="M18.513 7.119c.958-1.143 1.487-2.577 1.487-4.036v-3.083h-16v3.083c0 1.459.528 2.892 1.487 4.035l3.086 3.68c.567.677.571 1.625.009 2.306l-3.13 3.794c-.936 1.136-1.452 2.555-1.452 3.995v3.107h16v-3.107c0-1.44-.517-2.858-1.453-3.994l-3.13-3.794c-.562-.681-.558-1.629.009-2.306l3.087-3.68zm-4.639 7.257l3.13 3.794c.652.792.996 1.726.996 2.83h-12c0-1.104.343-2.039.996-2.829l3.129-3.793c1.167-1.414 1.159-3.459-.019-4.864l-3.086-3.681c-.66-.785-1.02-1.736-1.02-2.834h12c0 1.101-.363 2.05-1.02 2.834l-3.087 3.68c-1.177 1.405-1.185 3.451-.019 4.863z"></path></svg></div><div style="" class="roadmap-text">Coingecko Listing</div></li><li class="d-flex flex-row align-items-center m-0"><div style="" class="roadmap-status d-flex flex-row align-items-center justify-content-center"><svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 24 24" fill="#FFFFFF"><path d="M18.513 7.119c.958-1.143 1.487-2.577 1.487-4.036v-3.083h-16v3.083c0 1.459.528 2.892 1.487 4.035l3.086 3.68c.567.677.571 1.625.009 2.306l-3.13 3.794c-.936 1.136-1.452 2.555-1.452 3.995v3.107h16v-3.107c0-1.44-.517-2.858-1.453-3.994l-3.13-3.794c-.562-.681-.558-1.629.009-2.306l3.087-3.68zm-4.639 7.257l3.13 3.794c.652.792.996 1.726.996 2.83h-12c0-1.104.343-2.039.996-2.829l3.129-3.793c1.167-1.414 1.159-3.459-.019-4.864l-3.086-3.681c-.66-.785-1.02-1.736-1.02-2.834h12c0 1.101-.363 2.05-1.02 2.834l-3.087 3.68c-1.177 1.405-1.185 3.451-.019 4.863z"></path></svg></div><div style="" class="roadmap-text">Coinmarketcap Listing</div></li>
+<li class="d-flex flex-row align-items-center m-0"><div style="" class="roadmap-status d-flex flex-row align-items-center justify-content-center"><svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 24 24" fill="#FFFFFF"><path d="M18.513 7.119c.958-1.143 1.487-2.577 1.487-4.036v-3.083h-16v3.083c0 1.459.528 2.892 1.487 4.035l3.086 3.68c.567.677.571 1.625.009 2.306l-3.13 3.794c-.936 1.136-1.452 2.555-1.452 3.995v3.107h16v-3.107c0-1.44-.517-2.858-1.453-3.994l-3.13-3.794c-.562-.681-.558-1.629.009-2.306l3.087-3.68zm-4.639 7.257l3.13 3.794c.652.792.996 1.726.996 2.83h-12c0-1.104.343-2.039.996-2.829l3.129-3.793c1.167-1.414 1.159-3.459-.019-4.864l-3.086-3.681c-.66-.785-1.02-1.736-1.02-2.834h12c0 1.101-.363 2.05-1.02 2.834l-3.087 3.68c-1.177 1.405-1.185 3.451-.019 4.863z"></path></svg></div><div style="" class="roadmap-text">Game design</div></li>
+<li class="d-flex flex-row align-items-center m-0"><div style="" class="roadmap-status d-flex flex-row align-items-center justify-content-center"><svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 24 24" fill="#FFFFFF"><path d="M18.513 7.119c.958-1.143 1.487-2.577 1.487-4.036v-3.083h-16v3.083c0 1.459.528 2.892 1.487 4.035l3.086 3.68c.567.677.571 1.625.009 2.306l-3.13 3.794c-.936 1.136-1.452 2.555-1.452 3.995v3.107h16v-3.107c0-1.44-.517-2.858-1.453-3.994l-3.13-3.794c-.562-.681-.558-1.629.009-2.306l3.087-3.68zm-4.639 7.257l3.13 3.794c.652.792.996 1.726.996 2.83h-12c0-1.104.343-2.039.996-2.829l3.129-3.793c1.167-1.414 1.159-3.459-.019-4.864l-3.086-3.681c-.66-.785-1.02-1.736-1.02-2.834h12c0 1.101-.363 2.05-1.02 2.834l-3.087 3.68c-1.177 1.405-1.185 3.451-.019 4.863z"></path></svg></div><div style="" class="roadmap-text">Game trailer</div></li>
+<li class="d-flex flex-row align-items-center m-0"><div style="" class="roadmap-status d-flex flex-row align-items-center justify-content-center"><svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 24 24" fill="#FFFFFF"><path d="M18.513 7.119c.958-1.143 1.487-2.577 1.487-4.036v-3.083h-16v3.083c0 1.459.528 2.892 1.487 4.035l3.086 3.68c.567.677.571 1.625.009 2.306l-3.13 3.794c-.936 1.136-1.452 2.555-1.452 3.995v3.107h16v-3.107c0-1.44-.517-2.858-1.453-3.994l-3.13-3.794c-.562-.681-.558-1.629.009-2.306l3.087-3.68zm-4.639 7.257l3.13 3.794c.652.792.996 1.726.996 2.83h-12c0-1.104.343-2.039.996-2.829l3.129-3.793c1.167-1.414 1.159-3.459-.019-4.864l-3.086-3.681c-.66-.785-1.02-1.736-1.02-2.834h12c0 1.101-.363 2.05-1.02 2.834l-3.087 3.68c-1.177 1.405-1.185 3.451-.019 4.863z"></path></svg></div><div style="" class="roadmap-text">KYC</div></li>
+<li class="d-flex flex-row align-items-center m-0"><div style="" class="roadmap-status d-flex flex-row align-items-center justify-content-center"><svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 24 24" fill="#FFFFFF"><path d="M18.513 7.119c.958-1.143 1.487-2.577 1.487-4.036v-3.083h-16v3.083c0 1.459.528 2.892 1.487 4.035l3.086 3.68c.567.677.571 1.625.009 2.306l-3.13 3.794c-.936 1.136-1.452 2.555-1.452 3.995v3.107h16v-3.107c0-1.44-.517-2.858-1.453-3.994l-3.13-3.794c-.562-.681-.558-1.629.009-2.306l3.087-3.68zm-4.639 7.257l3.13 3.794c.652.792.996 1.726.996 2.83h-12c0-1.104.343-2.039.996-2.829l3.129-3.793c1.167-1.414 1.159-3.459-.019-4.864l-3.086-3.681c-.66-.785-1.02-1.736-1.02-2.834h12c0 1.101-.363 2.05-1.02 2.834l-3.087 3.68c-1.177 1.405-1.185 3.451-.019 4.863z"></path></svg></div><div style="" class="roadmap-text">Demo game launch</div></li>
+<li class="d-flex flex-row align-items-center m-0"><div style="" class="roadmap-status d-flex flex-row align-items-center justify-content-center"><svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 24 24" fill="#FFFFFF"><path d="M18.513 7.119c.958-1.143 1.487-2.577 1.487-4.036v-3.083h-16v3.083c0 1.459.528 2.892 1.487 4.035l3.086 3.68c.567.677.571 1.625.009 2.306l-3.13 3.794c-.936 1.136-1.452 2.555-1.452 3.995v3.107h16v-3.107c0-1.44-.517-2.858-1.453-3.994l-3.13-3.794c-.562-.681-.558-1.629.009-2.306l3.087-3.68zm-4.639 7.257l3.13 3.794c.652.792.996 1.726.996 2.83h-12c0-1.104.343-2.039.996-2.829l3.129-3.793c1.167-1.414 1.159-3.459-.019-4.864l-3.086-3.681c-.66-.785-1.02-1.736-1.02-2.834h12c0 1.101-.363 2.05-1.02 2.834l-3.087 3.68c-1.177 1.405-1.185 3.451-.019 4.863z"></path></svg></div><div style="" class="roadmap-text">Beta game launch for PC</div></li><li class="d-flex flex-row align-items-center m-0"><div style="" class="roadmap-status d-flex flex-row align-items-center justify-content-center"><svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 24 24" fill="#FFFFFF"><path d="M18.513 7.119c.958-1.143 1.487-2.577 1.487-4.036v-3.083h-16v3.083c0 1.459.528 2.892 1.487 4.035l3.086 3.68c.567.677.571 1.625.009 2.306l-3.13 3.794c-.936 1.136-1.452 2.555-1.452 3.995v3.107h16v-3.107c0-1.44-.517-2.858-1.453-3.994l-3.13-3.794c-.562-.681-.558-1.629.009-2.306l3.087-3.68zm-4.639 7.257l3.13 3.794c.652.792.996 1.726.996 2.83h-12c0-1.104.343-2.039.996-2.829l3.129-3.793c1.167-1.414 1.159-3.459-.019-4.864l-3.086-3.681c-.66-.785-1.02-1.736-1.02-2.834h12c0 1.101-.363 2.05-1.02 2.834l-3.087 3.68c-1.177 1.405-1.185 3.451-.019 4.863z"></path></svg></div><div style="" class="roadmap-text">Game launch</div></li>
 
 
 </ul></div>
 </div>
 
 <div class="roadmap-desktop d-none d-lg-flex row mt-5"><div class="col-12 col-lg-6" data-aos="fade-right"><div class="phase-title-wrapper mx-auto mx-lg-0 ms-lg-auto d-flex flex-column justify-content-center align-items-center "><h3 style="font-weight:700;font-size:2em;">PHASE 3</h3></div></div>
-<div class="col-12 col-lg-6" data-aos="fade-left"><ul class="list-unstyled "><li class="d-flex flex-row align-items-center m-0"><div style="" class="roadmap-status d-flex flex-row align-items-center justify-content-center"><svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 24 24" fill="#FFFFFF"><path d="M18.513 7.119c.958-1.143 1.487-2.577 1.487-4.036v-3.083h-16v3.083c0 1.459.528 2.892 1.487 4.035l3.086 3.68c.567.677.571 1.625.009 2.306l-3.13 3.794c-.936 1.136-1.452 2.555-1.452 3.995v3.107h16v-3.107c0-1.44-.517-2.858-1.453-3.994l-3.13-3.794c-.562-.681-.558-1.629.009-2.306l3.087-3.68zm-4.639 7.257l3.13 3.794c.652.792.996 1.726.996 2.83h-12c0-1.104.343-2.039.996-2.829l3.129-3.793c1.167-1.414 1.159-3.459-.019-4.864l-3.086-3.681c-.66-.785-1.02-1.736-1.02-2.834h12c0 1.101-.363 2.05-1.02 2.834l-3.087 3.68c-1.177 1.405-1.185 3.451-.019 4.863z"></path></svg></div><div style="" class="roadmap-text">Utility Community Decision
+<div class="col-12 col-lg-6" data-aos="fade-left"><ul class="list-unstyled "><li class="d-flex flex-row align-items-center m-0"><div style="" class="roadmap-status d-flex flex-row align-items-center justify-content-center"><svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 24 24" fill="#FFFFFF"><path d="M18.513 7.119c.958-1.143 1.487-2.577 1.487-4.036v-3.083h-16v3.083c0 1.459.528 2.892 1.487 4.035l3.086 3.68c.567.677.571 1.625.009 2.306l-3.13 3.794c-.936 1.136-1.452 2.555-1.452 3.995v3.107h16v-3.107c0-1.44-.517-2.858-1.453-3.994l-3.13-3.794c-.562-.681-.558-1.629.009-2.306l3.087-3.68zm-4.639 7.257l3.13 3.794c.652.792.996 1.726.996 2.83h-12c0-1.104.343-2.039.996-2.829l3.129-3.793c1.167-1.414 1.159-3.459-.019-4.864l-3.086-3.681c-.66-.785-1.02-1.736-1.02-2.834h12c0 1.101-.363 2.05-1.02 2.834l-3.087 3.68c-1.177 1.405-1.185 3.451-.019 4.863z"></path></svg></div><div style="" class="roadmap-text">Game design
+</div></li><li class="d-flex flex-row align-items-center m-0"><div style="" class="roadmap-status d-flex flex-row align-items-center justify-content-center"><svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 24 24" fill="#FFFFFF"><path d="M18.513 7.119c.958-1.143 1.487-2.577 1.487-4.036v-3.083h-16v3.083c0 1.459.528 2.892 1.487 4.035l3.086 3.68c.567.677.571 1.625.009 2.306l-3.13 3.794c-.936 1.136-1.452 2.555-1.452 3.995v3.107h16v-3.107c0-1.44-.517-2.858-1.453-3.994l-3.13-3.794c-.562-.681-.558-1.629.009-2.306l3.087-3.68zm-4.639 7.257l3.13 3.794c.652.792.996 1.726.996 2.83h-12c0-1.104.343-2.039.996-2.829l3.129-3.793c1.167-1.414 1.159-3.459-.019-4.864l-3.086-3.681c-.66-.785-1.02-1.736-1.02-2.834h12c0 1.101-.363 2.05-1.02 2.834l-3.087 3.68c-1.177 1.405-1.185 3.451-.019 4.863z"></path></svg></div><div style="" class="roadmap-text">Game trailer
+</div></li><li class="d-flex flex-row align-items-center m-0"><div style="" class="roadmap-status d-flex flex-row align-items-center justify-content-center"><svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 24 24" fill="#FFFFFF"><path d="M18.513 7.119c.958-1.143 1.487-2.577 1.487-4.036v-3.083h-16v3.083c0 1.459.528 2.892 1.487 4.035l3.086 3.68c.567.677.571 1.625.009 2.306l-3.13 3.794c-.936 1.136-1.452 2.555-1.452 3.995v3.107h16v-3.107c0-1.44-.517-2.858-1.453-3.994l-3.13-3.794c-.562-.681-.558-1.629.009-2.306l3.087-3.68zm-4.639 7.257l3.13 3.794c.652.792.996 1.726.996 2.83h-12c0-1.104.343-2.039.996-2.829l3.129-3.793c1.167-1.414 1.159-3.459-.019-4.864l-3.086-3.681c-.66-.785-1.02-1.736-1.02-2.834h12c0 1.101-.363 2.05-1.02 2.834l-3.087 3.68c-1.177 1.405-1.185 3.451-.019 4.863z"></path></svg></div><div style="" class="roadmap-text">KYC
+</div></li>
 
-</div></li><li class="d-flex flex-row align-items-center m-0"><div style="" class="roadmap-status d-flex flex-row align-items-center justify-content-center"><svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 24 24" fill="#FFFFFF"><path d="M18.513 7.119c.958-1.143 1.487-2.577 1.487-4.036v-3.083h-16v3.083c0 1.459.528 2.892 1.487 4.035l3.086 3.68c.567.677.571 1.625.009 2.306l-3.13 3.794c-.936 1.136-1.452 2.555-1.452 3.995v3.107h16v-3.107c0-1.44-.517-2.858-1.453-3.994l-3.13-3.794c-.562-.681-.558-1.629.009-2.306l3.087-3.68zm-4.639 7.257l3.13 3.794c.652.792.996 1.726.996 2.83h-12c0-1.104.343-2.039.996-2.829l3.129-3.793c1.167-1.414 1.159-3.459-.019-4.864l-3.086-3.681c-.66-.785-1.02-1.736-1.02-2.834h12c0 1.101-.363 2.05-1.02 2.834l-3.087 3.68c-1.177 1.405-1.185 3.451-.019 4.863z"></path></svg></div><div style="" class="roadmap-text">Ecron Utility Expansion
+<li class="d-flex flex-row align-items-center m-0"><div style="" class="roadmap-status d-flex flex-row align-items-center justify-content-center"><svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 24 24" fill="#FFFFFF"><path d="M18.513 7.119c.958-1.143 1.487-2.577 1.487-4.036v-3.083h-16v3.083c0 1.459.528 2.892 1.487 4.035l3.086 3.68c.567.677.571 1.625.009 2.306l-3.13 3.794c-.936 1.136-1.452 2.555-1.452 3.995v3.107h16v-3.107c0-1.44-.517-2.858-1.453-3.994l-3.13-3.794c-.562-.681-.558-1.629.009-2.306l3.087-3.68zm-4.639 7.257l3.13 3.794c.652.792.996 1.726.996 2.83h-12c0-1.104.343-2.039.996-2.829l3.129-3.793c1.167-1.414 1.159-3.459-.019-4.864l-3.086-3.681c-.66-.785-1.02-1.736-1.02-2.834h12c0 1.101-.363 2.05-1.02 2.834l-3.087 3.68c-1.177 1.405-1.185 3.451-.019 4.863z"></path></svg></div><div style="" class="roadmap-text">Demo game launch
+</div></li>
 
-</div></li><li class="d-flex flex-row align-items-center m-0"><div style="" class="roadmap-status d-flex flex-row align-items-center justify-content-center"><svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 24 24" fill="#FFFFFF"><path d="M18.513 7.119c.958-1.143 1.487-2.577 1.487-4.036v-3.083h-16v3.083c0 1.459.528 2.892 1.487 4.035l3.086 3.68c.567.677.571 1.625.009 2.306l-3.13 3.794c-.936 1.136-1.452 2.555-1.452 3.995v3.107h16v-3.107c0-1.44-.517-2.858-1.453-3.994l-3.13-3.794c-.562-.681-.558-1.629.009-2.306l3.087-3.68zm-4.639 7.257l3.13 3.794c.652.792.996 1.726.996 2.83h-12c0-1.104.343-2.039.996-2.829l3.129-3.793c1.167-1.414 1.159-3.459-.019-4.864l-3.086-3.681c-.66-.785-1.02-1.736-1.02-2.834h12c0 1.101-.363 2.05-1.02 2.834l-3.087 3.68c-1.177 1.405-1.185 3.451-.019 4.863z"></path></svg></div><div style="" class="roadmap-text">Massive Marketing Campaign
-
-</div></li><li class="d-flex flex-row align-items-center m-0"><div style="" class="roadmap-status d-flex flex-row align-items-center justify-content-center"><svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 24 24" fill="#FFFFFF"><path d="M18.513 7.119c.958-1.143 1.487-2.577 1.487-4.036v-3.083h-16v3.083c0 1.459.528 2.892 1.487 4.035l3.086 3.68c.567.677.571 1.625.009 2.306l-3.13 3.794c-.936 1.136-1.452 2.555-1.452 3.995v3.107h16v-3.107c0-1.44-.517-2.858-1.453-3.994l-3.13-3.794c-.562-.681-.558-1.629.009-2.306l3.087-3.68zm-4.639 7.257l3.13 3.794c.652.792.996 1.726.996 2.83h-12c0-1.104.343-2.039.996-2.829l3.129-3.793c1.167-1.414 1.159-3.459-.019-4.864l-3.086-3.681c-.66-.785-1.02-1.736-1.02-2.834h12c0 1.101-.363 2.05-1.02 2.834l-3.087 3.68c-1.177 1.405-1.185 3.451-.019 4.863z"></path></svg></div><div style="" class="roadmap-text">Coingecko Listing
-
+<li class="d-flex flex-row align-items-center m-0"><div style="" class="roadmap-status d-flex flex-row align-items-center justify-content-center"><svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 24 24" fill="#FFFFFF"><path d="M18.513 7.119c.958-1.143 1.487-2.577 1.487-4.036v-3.083h-16v3.083c0 1.459.528 2.892 1.487 4.035l3.086 3.68c.567.677.571 1.625.009 2.306l-3.13 3.794c-.936 1.136-1.452 2.555-1.452 3.995v3.107h16v-3.107c0-1.44-.517-2.858-1.453-3.994l-3.13-3.794c-.562-.681-.558-1.629.009-2.306l3.087-3.68zm-4.639 7.257l3.13 3.794c.652.792.996 1.726.996 2.83h-12c0-1.104.343-2.039.996-2.829l3.129-3.793c1.167-1.414 1.159-3.459-.019-4.864l-3.086-3.681c-.66-.785-1.02-1.736-1.02-2.834h12c0 1.101-.363 2.05-1.02 2.834l-3.087 3.68c-1.177 1.405-1.185 3.451-.019 4.863z"></path></svg></div><div style="" class="roadmap-text">Beta game launch for PC
+</div></li><li class="d-flex flex-row align-items-center m-0"><div style="" class="roadmap-status d-flex flex-row align-items-center justify-content-center"><svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 24 24" fill="#FFFFFF"><path d="M18.513 7.119c.958-1.143 1.487-2.577 1.487-4.036v-3.083h-16v3.083c0 1.459.528 2.892 1.487 4.035l3.086 3.68c.567.677.571 1.625.009 2.306l-3.13 3.794c-.936 1.136-1.452 2.555-1.452 3.995v3.107h16v-3.107c0-1.44-.517-2.858-1.453-3.994l-3.13-3.794c-.562-.681-.558-1.629.009-2.306l3.087-3.68zm-4.639 7.257l3.13 3.794c.652.792.996 1.726.996 2.83h-12c0-1.104.343-2.039.996-2.829l3.129-3.793c1.167-1.414 1.159-3.459-.019-4.864l-3.086-3.681c-.66-.785-1.02-1.736-1.02-2.834h12c0 1.101-.363 2.05-1.02 2.834l-3.087 3.68c-1.177 1.405-1.185 3.451-.019 4.863z"></path></svg></div><div style="" class="roadmap-text">Game launch
 </div></li>
 </ul></div>
 </div>
@@ -967,16 +1002,16 @@ z-index:3;
 <div class="accordion" id="accordionPanelsStayOpenExample">
   <div class="accordion-item">
     <h2 class="accordion-header" id="panelsStayOpen-headingOne">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="false" aria-controls="panelsStayOpen-collapseOne">What is New Gang BSC?</button>
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="false" aria-controls="panelsStayOpen-collapseOne">What is Croverse?</button>
     </h2>
     <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingOne" style="">
-      <div class="accordion-body">New Gang BSC is a community-driven token deployed on the Binance Smart Chain through the BSC medium. It is community driven and backed by a strong team to deliver for investors with the goal of creating wealth and use case just by holding the tokens. To achieve this vision, a detailed roadmap is laid out and the liquidity is locked initially to grant investors confidence in this project.
+      <div class="accordion-body">Croverse is a utility coin with 666 unique NFTs and a play to earn game. It is backed by a strong team to deliver for investors with a goal of creating wealth and use case just by holding the tokens. To achieve this vision, a detailed roadmap is laid out and the liquidity is locked initially to grant investors confidence in this project.
 </div>
     </div>
   </div>
   <div class="accordion-item">
     <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">When was New Gang BSC fairlaunched?</button>
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">When was Croverse fairlaunched?</button>
     </h2>
     <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo" style="">
       <div class="accordion-body">
@@ -1074,6 +1109,7 @@ AOS.init({
 
 });
 </script>
+
 
 
 
